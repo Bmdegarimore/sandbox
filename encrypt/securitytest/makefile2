@@ -1,0 +1,10 @@
+
+libsecurity : encrypt.o checksum.o
+	ar -rcs libsecurity.a checksum.o encrypt.o
+
+encrypt.o : encrypt.c encrypt.h
+	gcc -c encrypt.c
+
+
+checksum.o : checksum.c
+	gcc -c checksum.c
